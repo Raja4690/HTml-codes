@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+    
+     <ul>
+
+      <b>  <li>home</li><li> contact</li><li>  send</li></b>
+      
+      
+    </ul>
+</div>
+
+    <ul><li> contact</li></ul>
+</body>
+</html> -->
+
+
+create table Starhealthinsurance(
+                [branchID] [int] NOT NULL,
+    [bName] [varchar](30) NOT NULL,
+    [location] [varchar](50) NULL,
+    [Ncustomer] [int] NULL,
+    [Category] [varchar](20)  not NULL,
+	 CONSTRAINT [PK_branchID] PRIMARY KEY CLUSTERED
+(
+    [branchID] ASC
+)
+) ON [PRIMARY]
+
+
+INSERT  [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category])VALUES (101, 'canda', 'isduqjj', 89, 'premium')
+INSERT  [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (102, 'Usa',   'hqddqhq',  85, 'gold')
+INSERT  [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (103, 'Russia', 'dwdbdjd', 65,' gold')
+INSERT [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (104, 'China', 'jhdudwq',   32, '  silver')
+INSERT [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (105, 'Ukraine', 'huwhnxjj', 24, ' Life cover')
+INSERT [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (106, 'Algeria', 'uhsncnjk', null, 'Accident cover')
+INSERT [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (107, 'Armenia', 'jhjdsgj',44, ' 1 crore  life cover')
+INSERT [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (108, 'Bangladesh','hdjdjhxn', 36,'premium')
+INSERT [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (109,  'Belgium', 'poieijmd',05, 'gold')
+INSERT [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (110,  'Estonia','hehbebmkd', 67,'life cover till 99')
+INSERT [Starhealthinsurance] ([branchID],  [bName], [location], [Ncustomer],  [Category]) VALUES (111,  'Romenia', 'hdhuuhbbh',43, 'critical illness')
+
+
+select * from   Starhealthinsurance; 
+
+
+create table [changeofcategory](
+                [branchID] [int] not null ,
+    [CustomerName] [varchar](30) ,
+    [lcategory] [varchar](50) ,
+    [Ncategory] [int] ,
+    [newplan] [varchar](20) ,
+
+	 CONSTRAINT [PK_branchID] PRIMARY KEY CLUSTERED
+(
+    [branchID] ASC
+)
+) ON [PRIMARY]
+
+
+INSERT  [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan] )VALUES (101, 'Charles', 'premium',  'critical illness', '219999')
+INSERT  [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (104, 'Chioke',   'Life cover',   'gold' ,'279999')
+INSERT  [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan] ) VALUES (103, 'Perk', 'Accidental cover', 'life cover till 99 ', '60000')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan] ) VALUES (104, 'Sterry', 'Life cover', '  silver', '279999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (107, 'Senurita', 'Critical illness',  ' Life cover','279999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan] ) VALUES (106, 'Nike', 'premium',  'Accident cover', '199999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (107, 'Giyan', 'Critical illness', ' 1 crore  life cover','1999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]) VALUES (105, 'Jim','Gold', 'premium','499999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan] ) VALUES (101,  'Elina', 'Premium', 'gold','399999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (110,  'Taylor','Life cover till 99', 'Accidental cover',' 199999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan] ) VALUES (109,  'Sujan', 'Silver', 'critical illness', '219999')
+INSERT  [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  )VALUES (103, 'Liam', 'Accidental cover', 'premium','499999')
+INSERT  [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan] ) VALUES (102, 'Oliver',   '1 crore lifecover',   'gold','399999')
+INSERT  [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (105, 'Saga', 'gold', ' silver', '279999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (104, 'Daniel', 'Life cover', '  silver','279999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (103, 'Nathan', 'Accidental cover',  ' Life cover','279999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (107, 'Douglas', 'critical illness',  'Accident cover', '199999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (102, 'Henry', ' 1 crore  life cover', 'silver', '279999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan] ) VALUES (108, 'Joseph', 'premium' ,'critical illness','219999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (106,  'Charlee', 'premium', 'gold','399999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (110,  'Lio', 'life cover till 99', 'silver','279999')
+INSERT [changeofcategory] ([CustomerName],  [lcategory], [Ncategory], [newplan]  ) VALUES (102,  'Walter', '1 crore life cover ', 'critical illness', '219999')
+

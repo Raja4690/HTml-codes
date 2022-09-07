@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label id="ResultPlate" text="">Results</label> <br>
+    <script>
+        function Welcome() {
+            //var vName = "Espire";
+            // alert('Welcome Everybody from ' + vName);
+            alert('Welcome Everybody');
+        }
+        function compareNumbers(val1, val2) {
+            var str = "";
+            // if (val1 > val2) {
+            //     str = "val1 is greater";
+            // }
+            // else if (val1 < val2) {
+            //     str = "val2 is greater";
+            // }
+            // else {
+            //     str = "both are equal";
+            // }
+            function getGradesMessages(grade) {
+                var str = "";
+                switch (grade) {
+                    case "A":
+                        str = "Excellent";
+                        break;
+
+                    case "B":
+                        str = "Very Good";
+                        break;
+
+                    case "C":
+                        str = "Good";
+                        break;
+
+                    default:
+                        str = "not known yet";
+
+                }
+                //alert(str);
+                return (str);
+            }
+        }
+        var num1 = 10;
+        var num2 = 30
+        document.getElementById("ResultPlate").innerHTML = "Variable Example : " + num1;
+        document.write("writing here: " + (num1 * num2) + "<br>");
+        if (num1 > num2) {
+            document.write("num1 is greater" + "<br>");
+        }
+        else if (num1 < num2) {
+            document.write("num2 is greater" + "<br>");
+        }
+        else {
+            document.write("both are equal") + "<br>";
+        }
+
+        var fName = "Deepak";
+        var lname = "Raja Singh";
+        document.write(fName + "" + lname);
+        var cnt;
+        document.write("Loop starts" + "<br />");
+        for (cnt = 0; cnt < 10; cnt++) {
+            document.write("cnt value is : " + cnt + "<br />");
+        }
+        document.write("Loop ends!");
+
+        var cnt = 0;
+        document.write("Loop starts" + "<br />");
+        while (cnt < 10) {
+            document.write("cnt value is : " + cnt + "<br />");
+            if (cnt == 5) break;
+            cnt++;
+        }
+        document.write("Loop ends!");
+
+        // Error Handling
+        function myErrorHandler() {
+            var a = 100;
+            try {
+                nonExistingMethod();
+                alert("Value of variable a is : " + a);
+            }
+            catch (e) {
+                alert("Error: " + e.description);
+            }
+            finally {
+                alert("Finally block will always execute!");
+            }
+        }
+
+        // var arrFruits = ["Mango", "Apple", "Banana", "Grape", "Guava"]; 
+        var arrFruits = [];
+        arrFruits[0] = "Mango";
+        arrFruits[1] = "Apple";
+        arrFruits[2] = "Banana";
+        arrFruits[3] = "Grapes";
+        arrFruits[4] = "Guava";
+        arrFruits[5] = getGradesMessages("A");
+        var arrFruits = new Array("Mango", "Apple", "Banana", "Grape", "Guava");
+
+
+        arrFruits.push("Strawberry");
+    document.write(arrFruits.pop());
+
+        //var arrFruits = new Array("Mango", "Apple", "Banana", "Grape", "Guava");
+
+
+        // document.getElementById("ResultPlate").innerHTML = "My favourite fruit: " + arrFruits[3];
+        // document.getElementById("ResultPlate").innerHTML = "My favourite fruits are : " + arrFruits.toString();
+        document.getElementById("ResultPlate").innerHTML = "My favourite fruits are : " + arrFruits.join(" $");
+
+        // var ln = arrFruits.length;
+        for (i = 0; i < ln; i++) document.write(arrFruits[i]);
+
+    </script>
+
+    <input type="button" id="btnWelcome" name="btnWelcome" value="Welcome" onclick="Welcome()" />
+
+
+    <input type="button" id="btnCmpNum" name="btnCmpNum" value="Compare" onclick="compareNumbers(4, 3)" />
+
+    <input type="button" id="btnGrades" name="btnGrades" value="Grade Messages" onclick="getGradesMessages('B')" />
+
+    <input type="button" id="btnHandleErrors" name="btnHandleErrors" value="Handle Errors" onclick="myErrorHandler()" />
+</body>
+
+</html>

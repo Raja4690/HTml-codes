@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/raja.css">
+</head>
+
+<body>
+    <script>
+
+        function navFunction() {
+            alert("Name; " + navigator.appName + "  " + "Version " + navigator.appVersion + "  " + "cookie; " + navigator.cookieEnabled + "  " + "Agent; " + navigator.userAgent + "  " + "Language; " + navigator.language + "  " + "Product; " + navigator.product + "  " + "platform; " + navigator.platform);
+            return;
+        }
+
+        function winFunction() {
+
+            alert("Navigator; " + window.navigator + " " + " Location: " + window.location + " " + " Screen: " + window.screen + " " + " Width: " + window.innerWidth + " Height: " + window.innerHeight + " Name: " + window.name + " Opener: " + window.opener);
+
+            return;
+
+        }
+
+
+        function screenFunction() {
+
+            alert("Height; " + screen.height + " " + "Available Height: " + screen.availHeight + " " + "Width; " + screen.width + " " + "Available : " + screen.availWidth + "  " + "Pixel Depth: " + screen.pixelDepth + "  " + "Color Depth: " + screen.colorDepth);
+
+            return;
+
+        }
+
+
+        function locationFunction() {
+
+            alert("Hostname; " + location.hostname + " " + "href: " + location.href + " " + "Origin; " + location.origin);
+
+            //location.replace("http://www.google.com");
+
+            return;
+
+        }
+
+
+        function historyFunction() {
+
+            alert("Length; " + history.length);
+
+            //location.replace("http://www.google.com");
+
+            return;
+
+        }
+        var navProp;
+        document.write("Navigator Object Properties <br /> ");
+        for (navProp in navigator) {
+            document.write(navProp);
+            document.write("<br />");
+        }
+        document.write("Finished writing Navigator Object Properties!");
+
+
+
+    </script>
+
+
+    <button onclick="navFunction()">Get Navigator Information</button>
+    <button onclick="winFunction()">Get Window Information</button>
+    <button onclick="screenFunction()">Get Screen Information</button>
+    <button onclick="locationFunction()">Get Location Information</button>
+    <button onclick="historyFunction()">Get History Information</button>
+
+
+</body>
+
+</html>
